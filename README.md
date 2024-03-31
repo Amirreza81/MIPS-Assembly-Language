@@ -33,12 +33,12 @@ Write a program that takes a decimal number in base 10 as input and prints its b
 
 ## **Q9**:
 Write a subroutine that recursively calculates the output of the given function. Receive the number *n* from the user before calling the subroutine and print the result after the subroutine finishes.
-$$
+```math
 \mathrm{f}(n) = \begin{cases}
     1 & \text{if } n \leq 1 \\
     2 + \frac{f(n-1)}{n} & n > 1
 \end{cases}
-$$
+```
 
 ## **Q10**:
 We have a function that adds two numbers stored in registers a0 and a1 and returns the result. Write a program that takes two numbers as input, uses this function to print the sum in the output, and then modifies the function's code so that instead of adding the two numbers, it subtracts the second number from the first one. Then, call this function again with the same inputs and print the result.
