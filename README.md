@@ -1,4 +1,4 @@
-# **MIPS-Assembly-Language**
+# **MIPS-Assembly-Language Examples**
 10 questions with solution of MIPS assembly language
 
 ## **Q1**:
