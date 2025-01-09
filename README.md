@@ -50,4 +50,5 @@ You can also see the questions in persian [*here*](https://github.com/Amirreza81
 
 If you find any problem, feel free to contact [me](amirrezaazari1381@gmail.com).
 ## Instructor ✍
-[DR. Laleh Arshadi](https://www.linkedin.com/in/laleh-arshadi-3042b6163/?originalSubdomain=ir)
+[Dr. Laleh Arshadi](https://www.linkedin.com/in/laleh-arshadi-3042b6163/?originalSubdomain=ir)
+
