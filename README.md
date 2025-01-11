@@ -1,5 +1,5 @@
 # **MIPS-Assembly-Language Examples**
-10 questions with solution of MIPS assembly language
+10 questions with solutions of MIPS assembly language
 
 ## **Q1**:
 Write a program that selects a number between 0 and 10 and then asks the user to guess that number. The program should keep asking for guesses until the user guesses correctly. When the user's guess is correct, print "Well Guessed!" and end the program.
