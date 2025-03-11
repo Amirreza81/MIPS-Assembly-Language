@@ -1,54 +1,87 @@
-# **MIPS-Assembly-Language Examples**
-10 questions with solutions of MIPS assembly language
+# **MIPS Assembly Language: Programming Exercises with Solutions**
 
-## **Q1**:
-Write a program that selects a number between 0 and 10 and then asks the user to guess that number. The program should keep asking for guesses until the user guesses correctly. When the user's guess is correct, print "Well Guessed!" and end the program.
+This document presents a collection of 10 MIPS assembly language exercises, each designed to enhance understanding of low-level programming concepts. Solutions accompany each question to aid in learning and implementation.
 
-## **Q2**:
-Write a program that reads a memory location and if its value is even, store the number 0, otherwise store the number 1 in the same location. To determine if a number is even or odd, only the srl and sll instructions are allowed. Assume the memory address is located at register $s0.
+## **Exercise 1: Number Guessing Game**
+Write a MIPS assembly program that selects a random number between 0 and 10 and prompts the user to guess the number. The program should continue accepting guesses until the user correctly identifies the number. Upon a correct guess, display the message "Well Guessed!" and terminate.
 
-## **Q3**:
-Write a program that operates on two arrays of numbers stored in memory with predetermined lengths. First, it should take a natural number n (smaller than the length of the array) from the user, and then n numbers in the form of n<sub>1</sub> to n<sub>n</sub>. It should then swap the elements of the two arrays at positions n<sub>i</sub>. Note that this swapping should be done in place; meaning the final output should be visible in the initial two arrays in memory.
-<details>
-<summary>:eyes: Show example</summary>
-As an example, suppose we have two arrays with the following elements:<br _>
-A: 1, 2, 3, 4, 5<br _>
-B: 6, 7, 8, 9, 10, 11<br _>
-Now, if the input numbers are 2, 4, and 5, the second, fourth, and fifth elements of the two arrays should be swapped pairwise. We will have:<br _>
-A: 1, 7, 3, 9, 10<br _>
-B: 6, 2, 8, 4, 5, 11<br _>
-</details>
+---
 
-## **Q4**:
-Write a program to prompt the user for a 4-digit BCD number, and print an appropriate output whether it is divisible by 33 or not. Note that a 16-bit binary string is provided as input, where each 4 bits from right to left represent units, tens, hundreds, and thousands of the 4-digit BCD number, respectively.
+## **Exercise 2: Even or Odd Memory Update**
+Develop a program that reads a value from a specified memory location. If the value is even, store `0`; otherwise, store `1`. Only the `srl` (Shift Right Logical) and `sll` (Shift Left Logical) instructions may be used to determine parity. Assume the memory address is stored in register `$s0`.
 
-## **Q5**:
-Write a recursive subroutine to factorize the natural number *a* into its prime factors.
+---
 
-## **Q6**:
-Write a program that first takes an integer x as input, then receives a string of length x as input, and converts uppercase English letters to lowercase and lowercase letters to uppercase while leaving other characters unchanged. Use syscall 9 to store the string in memory.
+## **Exercise 3: Array Element Swapping**
+Implement a program that operates on two arrays stored in memory. The user inputs a natural number `n` (less than the array's length) and then specifies `n` indices. The program swaps elements of the two arrays at the given positions in place.
 
-## **Q7**:
-Write a program that opens a text file, reads its contents character by character from the end to the beginning, and writes them into another text file.
+**Example:**
+```
+Initial Arrays:
+A = {1, 2, 3, 4, 5}
+B = {6, 7, 8, 9, 10, 11}
+Input: {2, 4, 5}
 
-## **Q8**:
-Write a program that takes a decimal number in base 10 as input and prints its binary equivalent. In special cases, calculate the output up to 10 decimal places.
+After Swap:
+A = {1, 7, 3, 9, 10}
+B = {6, 2, 8, 4, 5, 11}
+```
 
-## **Q9**:
-Write a subroutine that recursively calculates the output of the given function. Receive the number *n* from the user before calling the subroutine and print the result after the subroutine finishes.
-```math
+---
+
+## **Exercise 4: BCD Divisibility Check**
+Write a program that prompts the user for a 4-digit BCD (Binary-Coded Decimal) number and determines whether it is divisible by 33. The input is a 16-bit binary value where each 4-bit segment represents a decimal digit (units, tens, hundreds, thousands).
+
+---
+
+## **Exercise 5: Recursive Prime Factorization**
+Implement a recursive subroutine to compute the prime factorization of a given natural number `a`.
+
+---
+
+## **Exercise 6: Case Conversion in Strings**
+Develop a program that:
+- Accepts an integer `x` from the user.
+- Receives a string of length `x` using syscall 9.
+- Converts uppercase letters to lowercase and vice versa while preserving other characters.
+
+---
+
+## **Exercise 7: Reverse File Read and Write**
+Write a program that opens a text file, reads its contents character by character in reverse order, and writes the reversed content into another text file.
+
+---
+
+## **Exercise 8: Decimal to Binary Conversion**
+Implement a program that takes a decimal number as input and prints its binary equivalent. For fractional numbers, compute the binary representation up to 10 decimal places.
+
+---
+
+## **Exercise 9: Recursive Function Calculation**
+Write a recursive subroutine to evaluate the function:
+\[
 \mathrm{f}(n) = \begin{cases}
     1 & \text{if } n \leq 1 \\
     2 + \frac{f(n-1)}{n} & n > 1
 \end{cases}
-```
+\]
+The program should prompt the user for `n`, compute `f(n)`, and display the result.
 
-## **Q10**:
-We have a function that adds two numbers stored in registers a0 and a1 and returns the result. Write a program that takes two numbers as input, uses this function to print the sum in the output, and then modifies the function's code so that instead of adding the two numbers, it subtracts the second number from the first one. Then, call this function again with the same inputs and print the result.
+---
 
-You can also see the questions in persian [*here*](https://github.com/Amirreza81/MIPS-Assembly-Language/blob/main/CSL-HW01.pdf).
+## **Exercise 10: Modifying a Function at Runtime**
+Implement a function that:
+1. Takes two numbers as input.
+2. Adds the numbers (stored in `$a0` and `$a1`) and returns the result.
+3. Prints the sum.
+4. Modifies the function to perform subtraction instead of addition.
+5. Calls the modified function with the same inputs and prints the new result.
 
-If you find any problem, feel free to contact [me](amirrezaazari1381@gmail.com).
-## Instructor ✍
+---
+
+For additional reference, you can find these questions in Persian [*here*](https://github.com/Amirreza81/MIPS-Assembly-Language/blob/main/CSL-HW01.pdf).
+
+For any inquiries, feel free to contact [Amirreza Azari](mailto:amirrezaazari1381@gmail.com).
+
+## **Instructor** ✍
 [Dr. Laleh Arshadi](https://www.linkedin.com/in/laleh-arshadi-3042b6163/?originalSubdomain=ir)
-
